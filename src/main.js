@@ -8,9 +8,6 @@ const map =
 
     ]
 
-let x = 5
-let y = 7
-
 
 
 
@@ -42,45 +39,70 @@ const createBoard = function (blueprint) {
 }
 
 createBoard(map);
+
+// function allSpacesfilled() {
+//     if (discs.length.classList === "player1" || "player2") {
+//         console.log("works")
+//     }
+// }
+
+
 let discs = document.querySelectorAll(".disc")
+let emptySpaceMessage = document.getElementById("space-message")
 
 
 function findLastEmptySpot(positionOfY) {
     for (let i = 0; i < discs.length; i++) {
         if (discs[i].dataset.y === positionOfY) {
-            for (let k = 0; k < 6; k++) {
-                console.log(discs[i].classList.contains("player1"))
+            for (let k = 0; k < map.length; k++) {
+                // console.log(discs[i].classList.contains("player1"))
                 if (discs[i].classList.contains("player1") === false && discs[i].classList.contains("player2") === false) {
-                    console.log(discs[i])
+                    // console.log(discs[i])
                     return discs[i]
                 }
 
             }
         }
     }
-    return console.log("no empty spaces")
+    emptySpaceMessage.innerHTML = "There are no empty spaces in that column"
+    return 
 
 
 
 }
 
+function checkForHorizontal() {
+    for (let i =0; i< discs.length; i++){
+
+    }
+
+}
+
+
+const messageDiv = document.getElementById("turn-message")
 // console.log(discs)
 let playerCounter = 1
+
 function addDisc(event) {
-    console.log(event.target)
+    // console.log(event.target)
+    emptySpaceMessage.innerHTML = ""
+
+    // checkforColumn()
     if (playerCounter % 2 === 1) {
         let yPosition = event.target.dataset.y
         let emptySpot = findLastEmptySpot(yPosition)
         emptySpot.classList.add("player1")
         playerCounter++
+        messageDiv.innerHTML = "Player 2's turn"
     }
     else if (playerCounter % 2 === 0) {
         let yPosition = event.target.dataset.y
         let emptySpot = findLastEmptySpot(yPosition)
         emptySpot.classList.add("player2")
-        playerCounter++
-
+        playerCounter--
+        messageDiv.innerHTML = "Player 1's turn"
     }
+    // allSpacesfilled()
 }
 
 

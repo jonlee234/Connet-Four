@@ -1,7 +1,11 @@
+:root {
+    box-sizing: border-box;
+}
+
 #game{
    margin: auto;
    
-    height: 400px;
+    height: 425px;
 
     width: 500px;
     border: 1px solid black;
@@ -19,7 +23,8 @@
     flex-grow: 1;
     position: relative;
     border: 1px solid black;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    background-image: url("circleimage.png");
     background-color: white;
 }
 
@@ -29,4 +34,11 @@
 
 .player2 {
     background-color: yellow;
+}
+
+#turn-message, #space-message{
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
