@@ -238,7 +238,7 @@ function addDisc(event) {
         finishedGame = true
     } else if (checkForDiagonallyDownAndLeft() === "Player 2") {
         displayWinningMessage("Player 2")
-        finishedGame = true 
+        finishedGame = true
     }
 
     if (discCount === 42) {

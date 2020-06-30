@@ -1,4 +1,11 @@
+gitlab page https://jonlee234.gitlab.io/connect-4     
+
+
+
 Connect 4 project - Kevin Clark, Yaseen Al-Salamy, Zach Baca and Jonathane Leavell
+
+
+
 
 Make the layout
 
