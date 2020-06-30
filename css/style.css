@@ -1,0 +1,25 @@
+#game{
+   margin: auto;
+   
+    height: 400px;
+
+    width: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column
+    ;
+    position: relative;
+   background-color: rgba(32, 178, 171, 0.623);
+}
+.row {
+    flex-grow: 1;
+     display: flex;
+   ; }
+
+.game {
+    flex-grow: 1;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
