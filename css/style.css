@@ -33,7 +33,7 @@
 }
 
 .player2 {
-    background-color: yellow;
+    background-color: black;
 }
 
 #turn-message, #space-message{
@@ -41,4 +41,16 @@
     margin: 20px;
     font-size: 30px;
     font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+    border:none;
+    padding: 30px;
+    font-size: 30px;
 }
