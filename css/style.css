@@ -16,7 +16,7 @@
      display: flex;
    ; }
 
-.game {
+.disc {
     flex-grow: 1;
     position: relative;
     border: 1px solid black;

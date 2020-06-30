@@ -8,6 +8,9 @@ const map =
  
 ]
 
+let x=5
+let y=7
+
 
 
 
@@ -15,7 +18,7 @@ const map =
 const connEl = document.getElementById('game')
 
 
-const createMaze = function (blueprint) {
+const createBoard = function (blueprint) {
 
 
     for (let rowNum = 0; rowNum < blueprint.length; rowNum++) {
@@ -26,7 +29,7 @@ const createMaze = function (blueprint) {
            
 
             if (blockType === 'E') {
-                blockDivs += `<div id="${rowNum},${colNum}" class ="game"></div>`
+                blockDivs += `<div class ="disc" data-x = "${rowNum}"data-y = "${colNum}" data></div> `
                
             }
 
@@ -38,4 +41,18 @@ const createMaze = function (blueprint) {
 
 }
 
-createMaze(map);
+createBoard(map);
+
+
+let discs = document.querySelectorAll(".disc")
+
+function addDisc(event){
+    console.log(event.target)
+    // for(let i = )
+}
+
+
+
+
+
+connEl.addEventListener('click', addDisc)
