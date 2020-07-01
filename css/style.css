@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url('./connect-four.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #game{
    margin: auto;
    
