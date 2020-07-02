@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Cafeteria';
+    src: url('./Cafeteria-Bold.otf');}
+
 :root {
     box-sizing: border-box;
+    
 }
 
 html {
@@ -8,6 +13,8 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: Cafeteria;
+    font-size: large;
 }
 
 #game{
@@ -52,7 +59,10 @@ html {
 }
 
 h1 {
+    
     text-align: center;
+    text-transform: uppercase;
+    
 }
 
 button {
@@ -62,3 +72,8 @@ button {
     padding: 30px;
     font-size: 30px;
 }
+
+   
+
+    
+    
