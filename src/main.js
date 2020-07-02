@@ -146,11 +146,13 @@ function checkForDiagonallyDownAndLeft() {
 }
 
 function displayWinningMessage(player) {
+    messageDiv.style.display = "none"
     let endMessageContainer = document.getElementById('end-message')
     endMessageContainer.innerHTML = `<h1>Congratulations! ${player} Has Won The Game!!</h1>`
 }
 
 function displayTieMessage() {
+    messageDiv.style.display = "none"
     let message = document.getElementById("end-message")
     message.innerHTML = "<h1>The game is a Tie</h1>"
     console.log("tie")
@@ -202,18 +204,16 @@ function addDisc(event) {
         messageDiv.innerHTML = "Player 1's turn"
         discCount++
     }
-    // allSpacesfilled()
-    // console.log(discCount)
-    // checkForHorizontal()
-    // checkForVertical()
-
-
 
     if (checkForHorizontal() === "Player 1") {
         displayWinningMessage("Player 1")
+
+
         finishedGame = true
     } else if (checkForHorizontal() === "Player 2") {
         displayWinningMessage("Player 2")
+
+
         finishedGame = true
     }
 
@@ -248,6 +248,7 @@ function addDisc(event) {
 
 
 }
+
 
 
 
